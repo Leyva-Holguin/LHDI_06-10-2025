@@ -1,1 +1,15 @@
-# LHDI_06-10-2025
+# pendiente    
+## objetivo:  
+Crear una pagina que tenga lo siguiente
+- inicio
+- animales curiosos
+- vehiculos
+- las 7 maravillas del mundo
+- acerca de (informacion mia)
+- pie de pagina decir "derechos reservados 2025"
+## Datos:  
+- Nombre: Daniel Ivan  
+- Apellidos: Leyva Holguin  
+- Correo: 24308060610008@cetis.edu.mx
+<img alt="image" src="https://github.com/user-attachments/assets/fde956b2-5c6b-42c2-94ec-0606f1b02155" />
+
