@@ -4,11 +4,27 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template('index.html')
+    return render_template('base.html')
 
-#@app.route("/index1")
-#def index1():
-#    return render_template('index1.html')
+@app.route("/inicio")
+def inicio():
+    return render_template('inicio.html')
+
+@app.route("/animales")
+def aniamles():
+    return render_template('animales.html')
+
+@app.route("/vehiculos")
+def vehiculos():
+    return render_template('vehiculos.html')
+
+@app.route("/maravillas")
+def maravillas():
+    return render_template('maravillas.html')
+
+@app.route("/acerca")
+def acerca():
+    return render_template('acerca.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

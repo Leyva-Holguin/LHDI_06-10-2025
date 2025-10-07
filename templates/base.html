@@ -32,21 +32,21 @@
                                 <div class="offcanvas-body">
                                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                                         <li class="nav-item">
-                                            <a class="nav-link active" aria-current="page" href="#Incio">Inico</a>
+                                            <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5000/inicio">Inicio</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link active" href="#Animales">Animales exóticos</a>
+                                            <a class="nav-link active" href="http://127.0.0.1:5000/animales">Animales exóticos</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link active " aria-current="page" href="#Vehiculos">Vehiculos
+                                            <a class="nav-link active " aria-current="page" href="http://127.0.0.1:5000/vehiculos">Vehiculos
                                                 Antiguos</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link active" aria-current="page" href="#Maravillas">Las
+                                            <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5000/maravillas">Las
                                                 Maravillas del Mundo</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link active" aria-current="page" href="#Acerca">Acerca de
+                                            <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5000/acerca">Acerca de
                                                 mi</a>
                                         </li>
                                     </ul>
@@ -57,24 +57,12 @@
                 </div>
                 <h1 class="text-primary-emphasis text-start">Desarrollo de plantillas base</h1>
             </div>
+            
         </header>
-        <main>
-            <section id="weas">
-                <div class="row border-bottom border-primary py-2">
-                    <div class="col-12">
-                        <h3 class="text-primary-emphasis mb-3">Bienvenido</h3>
-                        <p>En esta pagina podras encontrar informacion sobre:</p>
-                            <ul>
-                                <li>Inicio</li>
-                                <li>Animales exóticos</li>
-                                <li>Vehiculos Antiguos</li>
-                                <li>Las Maravillas del Mundo</li>
-                                <li>Acerda de mi</li>
-                            </ul>
-                    </div>
-                </div>
-            </section>
-        </main>
+        <section>
+            {% block contenido %}
+            {%endblock%}
+        </section>
         <footer class="text-center" id="pie">
             <h6>Derechos reservados 2025</h6>
         </footer>
