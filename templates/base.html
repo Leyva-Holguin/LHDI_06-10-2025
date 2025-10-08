@@ -10,11 +10,11 @@
 </head>
 
 <body>
-    <div class="container-fluid bg-primary-subtle">
+    <div class="container-fluid bg-secondary-subtle">
         <header>
             <div class="row">
                 <div class="col-12">
-                    <nav class="navbar navbar-white border-bottom border-primary bg-primary-subtle fixed-top">
+                    <nav class="navbar navbar-white border-bottom border-black bg-secondary     fixed-top">
                         <div class="container-fluid">
                             <a class="navbar-brand" href="#">Menu de navegacion</a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
@@ -22,7 +22,7 @@
                                 aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
-                            <div class="offcanvas offcanvas-end bg-primary-subtle border-start border-5 border-primary"
+                            <div class="offcanvas offcanvas-end bg-secondary border-start border-5 border-black"
                                 tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                                 <div class="offcanvas-header">
                                     <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu de navegacion</h5>
@@ -46,8 +46,7 @@
                                                 Maravillas del Mundo</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5000/acerca">Acerca de
-                                                mi</a>
+                                            <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5000/acerca">Acerca </a>
                                         </li>
                                     </ul>
                                 </div>
@@ -55,15 +54,14 @@
                         </div>
                     </nav>
                 </div>
-                <h1 class="text-primary-emphasis text-start">Desarrollo de plantillas base</h1>
             </div>
             
         </header>
-        <section>
+        <section class="border-bottom border-black">
             {% block contenido %}
             {%endblock%}
         </section>
-        <footer class="text-center" id="pie">
+        <footer class="text-center bg-secondary" id="pie">
             <h6>Derechos reservados 2025</h6>
         </footer>
     </div>

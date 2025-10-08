@@ -1,20 +1,81 @@
 {% extends "base.html" %} 
 
 {% block contenido %}
-<section id="weas">
-    <div class="row border-bottom border-primary py-2">
-        <div class="col-12">
-            <h3 class="text-primary-emphasis mb-3">Bienvenido esta es la pagina de incio</h3>
-            <p>En esta pagina podras encontrar informacion sobre:</p>
-            <ul>
-                <li>Inicio</li>
-                <li>Animales exóticos</li>
-                <li>Vehiculos Antiguos</li>
-                <li>Las Maravillas del Mundo</li>
-                <li>Acerca de...</li>
-            </ul>
+<section class="mt-5 pt-4">
+    <div class="card border-0 shadow-sm mb-5">
+        <div class="card-body p-0">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <h1 class="fw-bold text-primary border-bottom pb-3 mb-4 text-center">Bienvenido</h1>
+                        <p class="text-center">Exploraremos las maravillas más fascinantes de nuestro planeta.
+                        En este sitio encontrarás información sobre animales exóticos, vehículos antiguos y las siete maravillas del mundo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card border-0 shadow-sm mb-5">
+        <div class="card-body p-0">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2 class="fw-bold text-success border-bottom pb-2 mb-4">Animales Exóticos</h2>
+                        <p>Descubre lo maravilloso del reino animal a través de nuestra colección de animales exoticos.
+                        En esta sección encontrarás información sobre 2 animales acuáticos, 2 terrestres y 2 aéreos, mas informacion general del reino animal.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="{{ url_for('static', filename='img/animal.webp') }}" alt="Animales exóticos" class="img-fluid rounded shadow w-50">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card border-0 shadow-sm mb-5">
+        <div class="card-body p-0">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2 class="fw-bold text-secondary border-bottom pb-2 mb-4">Vehículos Antiguos</h2>
+                        <p>Adéntrate en la historia del nacimiento de los vehículos.
+                        Exploraremos 5 vehículos antiguos emblemáticos, uno por cada marca pionera, descubriendo sus innovaciones técnicas, diseño y el legado que dejaron.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="{{ url_for('static', filename='img/auto.webp') }}" alt="Vehículos antiguos" class="img-fluid rounded shadow w-50">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card border-0 shadow-sm mb-5">
+        <div class="card-body p-0">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2 class="fw-bold text-warning border-bottom pb-2 mb-4">Las 7 Maravillas del Mundo</h2>
+                        <p>Tomemos un viaje por los monumentos más impresionantes creados por la humanidad.
+                        Conocerás cada una de estas obras maestras a través de imágenes y videos, descubriendo su historia, construcción, significado cultural.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="{{ url_for('static', filename='img/mara.jpg') }}" alt="Maravillas del mundo" class="img-fluid rounded shadow w-50">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card border-0 shadow-sm mb-5">
+        <div class="card-body p-0">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <h2 class="fw-bold text-info border-bottom pb-2 mb-4 text-center">Acerca de Mí</h2>
+                        <p class="text-center">Conoce más sobre mis intereses, aspiraciones y pasiones. En esta sección comparto información personal sobre lo que me gusta y lo que espero lograr en el futuro.</p>
+                        <div class="text-center mt-4">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
-
 {% endblock%}

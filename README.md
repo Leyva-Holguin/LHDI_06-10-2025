@@ -2,7 +2,7 @@
 ## objetivo:  
 Crear una pagina que tenga lo siguiente
 - inicio
-- animales curiosos
+- animales exoticos
 - vehiculos
 - las 7 maravillas del mundo
 - acerca de (informacion mia)
