@@ -1,4 +1,4 @@
-# pendiente    
+# Plantillas
 ## objetivo:  
 Crear una pagina que tenga lo siguiente
 - inicio
@@ -6,7 +6,6 @@ Crear una pagina que tenga lo siguiente
 - vehiculos
 - las 7 maravillas del mundo
 - acerca de (informacion mia)
-- pie de pagina decir "derechos reservados 2025"
 ## Datos:  
 - Nombre: Daniel Ivan  
 - Apellidos: Leyva Holguin  
