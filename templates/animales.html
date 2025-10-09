@@ -1,4 +1,75 @@
 {% extends "base.html" %} 
 
 {% block contenido %}
+<section class="mt-5 pt-4">
+    <div class="card border-0 shadow-sm mb-5">
+        <div class="card-body p-0">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <h1 class="fw-bold text-success border-bottom pb-3 mb-4 text-center">Animales Exóticos</h1>
+                        <p class="lead text-center">Descubre la asombrosa diversidad del reino animal a través de estas criaturas extraordinarias que habitan en los diferentes ecosistemas de nuestro planeta.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card border-0 shadow-sm mb-5">
+        <div class="card-body p-0">
+            <div class="container py-5">
+                <h2 class="fw-bold text-info border-bottom pb-2 mb-4 text-center">Animales Acuáticos</h2>
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center">
+                        <img src="{{ url_for('static', filename='img/ajo.jpg') }}" alt="Axolotl" class="img-fluid rounded shadow w-50 mb-3">
+                        <h4 class="fw-bold">Axolotl Mexicano</h4>
+                        <p>Anfibio que puede regenerar extremidades completas. Solo habita en los canales de Xochimilco, México.</p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="{{ url_for('static', filename='img/pulpo.webp') }}" alt="Pulpo Mimo" class="img-fluid rounded shadow w-50 mb-3">
+                        <h4 class="fw-bold">Pulpo Mimo</h4>
+                        <p>Maestro del camuflaje que puede imitar la apariencia y movimientos de más de 15 especies marinas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card border-0 shadow-sm mb-5">
+        <div class="card-body p-0">
+            <div class="container py-5">
+                <h2 class="fw-bold text-warning border-bottom pb-2 mb-4 text-center">Animales Terrestres</h2>
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center">
+                        <img src="{{ url_for('static', filename='img/pangolin.jpg') }}" alt="Pangolin" class="img-fluid rounded shadow w-50 mb-3">
+                        <h4 class="fw-bold">Pangolin</h4>
+                        <p>Único mamífero cubierto de escamas. Se enrolla formando una bola impenetrable cuando se siente amenazado.</p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="{{ url_for('static', filename='img/aye.png') }}" alt="Aye-Aye" class="img-fluid rounded shadow w-50 mb-3">
+                        <h4 class="fw-bold">Aye-Aye</h4>
+                        <p>Lémur con un dedo medio extremadamente largo que usa para localizar y extraer larvas de los árboles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card border-0 shadow-sm mb-5">
+        <div class="card-body p-0">
+            <div class="container py-5">
+                <h2 class="fw-bold text-primary border-bottom pb-2 mb-4 text-center">Animales Aéreos</h2>
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center">
+                        <img src="{{ url_for('static', filename='img/coli.webp') }}" alt="Colibrí Abeja" class="img-fluid rounded shadow w-50 mb-3">
+                        <h4 class="fw-bold">Colibrí Abeja</h4>
+                        <p>El ave más pequeña del mundo. Mide apenas 5 cm y puede batir sus alas hasta 80 veces por segundo.</p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="{{ url_for('static', filename='img/gua.webp') }}" alt="Guacamayo Jacinto" class="img-fluid rounded shadow w-50 mb-3">
+                        <h4 class="fw-bold">Guacamayo Jacinto</h4>
+                        <p>El papagayo más grande del mundo, con un impresionante plumaje azul cobalto y un pico extremadamente fuerte.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock%}

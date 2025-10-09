@@ -1,18 +1,192 @@
 {% extends "base.html" %} 
 
 {% block contenido %}
-<section id="weas">
-    <div class="row border-bottom border-primary py-2">
-        <div class="col-12">
-            <h3 class="text-primary-emphasis mb-3">Bienvenido esta es la pagina de incio</h3>
-            <p>En esta pagina podras encontrar informacion sobre:</p>
-            <ul>
-                <li>Inicio</li>
-                <li>Animales exóticos</li>
-                <li>Vehiculos Antiguos</li>
-                <li>Las Maravillas del Mundo</li>
-                <li>Acerca de...</li>
-            </ul>
+<section class="mt-5 pt-4">
+    <div class="card border-0 shadow-sm mb-5">
+        <div class="card-body p-0">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <h1 class="fw-bold text-warning border-bottom pb-3 mb-4 text-center">Las 7 Maravillas del Mundo</h1>
+                        <p class="lead text-center">Descubre los monumentos más extraordinarios creados por la humanidad, obras maestras de la arquitectura e ingeniería que han desafiado el tiempo y continúan inspirando asombro.</p>
+                        <p class="text-center">Estas maravillas, seleccionadas a través de una votación global, representan la cumbre del ingenio humano y la diversidad cultural de nuestro planeta. Cada una cuenta una historia única de perseverancia, creatividad y la búsqueda eterna de la grandeza.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card border-0 shadow-sm mb-5">
+        <div class="card-body p-0">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2 class="fw-bold text-warning border-bottom pb-2 mb-4">Chichén Itzá</h2>
+                        <p class="fw-bold text-muted">México</p>
+                        <p>Antigua ciudad maya que floreció entre los años 600 y 1200 d.C. Su pirámide principal, conocida como "El Castillo", es un impresionante testimonio de los avanzados conocimientos astronómicos de los mayas.</p>
+                        <p>Durante los equinoccios de primavera y otoño, el juego de luz y sombra crea la ilusión de una serpiente descendiendo por la escalinata norte, representando a Kukulkán, la serpiente emplumada.</p>
+                        <div class="mt-4">
+                            <h5 class="fw-bold">Video:</h5>
+                            <video controls class="w-100 rounded shadow mb-3">
+                                <source src="{{ url_for('static', filename='videos/chichen.mp4') }}" type="video/mp4">
+                                Tu navegador no soporta el video.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="{{ url_for('static', filename='img/chichen-itza.jpg') }}" alt="Chichén Itzá" class="img-fluid rounded shadow w-75 mb-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card border-0 shadow-sm mb-5">
+        <div class="card-body p-0">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2 class="fw-bold text-warning border-bottom pb-2 mb-4">Cristo Redentor</h2>
+                        <p class="fw-bold text-muted">Brasil</p>
+                        <p>Icono de Río de Janeiro y símbolo del cristianismo en el mundo, esta estatua de 30 metros de altura se eleva sobre el cerro del Corcovado a 710 metros sobre el nivel del mar.</p>
+                        <p>Inaugurado en 1931 después de 9 años de construcción, el Cristo Redentor fue creado por el escultor francés Paul Landowski y el ingeniero brasileño Heitor da Silva Costa.</p>
+                        <p>Hecho de hormigón armado y piedra jabón, resiste fuertes vientos y tormentas eléctricas gracias a su ingenioso diseño.</p>
+                        <div class="mt-4">
+                            <h5 class="fw-bold">Video:</h5>
+                            <video controls class="w-100 rounded shadow mb-3">
+                                <source src="{{ url_for('static', filename='videos/chichen.mp4') }}" type="video/mp4">
+                                Tu navegador no soporta el video.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="{{ url_for('static', filename='img/cristo-redentor.jpg') }}" alt="Cristo Redentor" class="img-fluid rounded shadow w-75 mb-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card border-0 shadow-sm mb-5">
+        <div class="card-body p-0">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2 class="fw-bold text-warning border-bottom pb-2 mb-4">Coliseo Romano</h2>
+                        <p class="fw-bold text-muted">Italia</p>
+                        <p>Anfiteatro flavio construido en el siglo I d.C., es el anfiteatro más grande jamás construido y un monumento emblemático de la Roma Imperial.</p>
+                        <p>Con capacidad para 50,000 espectadores, albergaba luchas de gladiadores, ejecuciones y espectáculos públicos. Su complejo sistema de túneles y montacargas permitía efectos escénicos sorprendentes.</p>
+                        <p>A pesar de los daños por terremotos y el saqueo de sus materiales, el Coliseo permanece como testimonio del poder y la ingeniería romana.</p>
+                        <div class="mt-4">
+                            <h5 class="fw-bold">Video:</h5>
+                            <video controls class="w-100 rounded shadow mb-3">
+                                <source src="{{ url_for('static', filename='videos/chichen.mp4') }}" type="video/mp4">
+                                Tu navegador no soporta el video.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="{{ url_for('static', filename='img/coliseo-romano.jpg') }}" alt="Coliseo Romano" class="img-fluid rounded shadow w-75 mb-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card border-0 shadow-sm mb-5">
+        <div class="card-body p-0">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2 class="fw-bold text-warning border-bottom pb-2 mb-4">Gran Muralla China</h2>
+                        <p class="fw-bold text-muted">China</p>
+                        <p>Con más de 21,000 km de longitud, esta fortificación es la estructura arquitectónica más larga jamás construida por el ser humano.</p>
+                        <p>Su construcción se extendió por más de 2,000 años, desde el siglo VII a.C. hasta la dinastía Ming (1368-1644). No es una muralla continua, sino una serie de fortificaciones interconectadas.</p>
+                        <p>Contrario al mito popular, la Gran Muralla no es visible desde el espacio a simple vista, pero sí representa una hazaña de ingeniería sin igual.</p>
+                        <div class="mt-4">
+                            <h5 class="fw-bold">Video:</h5>
+                            <video controls class="w-100 rounded shadow mb-3">
+                                <source src="{{ url_for('static', filename='videos/chichen.mp4') }}" type="video/mp4">
+                                Tu navegador no soporta el video.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="{{ url_for('static', filename='img/gran-muralla.jpg') }}" alt="Gran Muralla China" class="img-fluid rounded shadow w-75 mb-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card border-0 shadow-sm mb-5">
+        <div class="card-body p-0">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2 class="fw-bold text-warning border-bottom pb-2 mb-4">Machu Picchu</h2>
+                        <p class="fw-bold text-muted">Perú</p>
+                        <p>Antigua ciudad inca del siglo XV situada a 2,430 metros sobre el nivel del mar en los Andes peruanos. Fue redescubierta en 1911 por el explorador Hiram Bingham.</p>
+                        <p>Conocida como "la ciudad perdida de los incas", su propósito exacto sigue siendo misterioso, aunque se cree que fue una residencia real o un centro ceremonial.</p>
+                        <p>Su construcción sin mortero, con piedras perfectamente encajadas que resisten terremotos, demuestra el avanzado conocimiento de ingeniería de los incas.</p>
+                        <div class="mt-4">
+                            <h5 class="fw-bold">Video:</h5>
+                            <video controls class="w-100 rounded shadow mb-3">
+                                <source src="{{ url_for('static', filename='videos/chichen.mp4') }}" type="video/mp4">
+                                Tu navegador no soporta el video.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="{{ url_for('static', filename='img/machu-picchu.jpg') }}" alt="Machu Picchu" class="img-fluid rounded shadow w-75 mb-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card border-0 shadow-sm mb-5">
+        <div class="card-body p-0">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2 class="fw-bold text-warning border-bottom pb-2 mb-4">Petra</h2>
+                        <p class="fw-bold text-muted">Jordania</p>
+                        <p>Antigua ciudad nabatea tallada directamente en los acantilados de piedra arenisca roja del desierto jordano. Conocida como "la ciudad rosa" por el color de la roca.</p>
+                        <p>Floreció como capital del reino nabateo entre el 400 a.C. y 106 d.C., controlando las rutas comerciales de especias e incienso.</p>
+                        <p>Su estructura más famosa, "El Tesoro" (Al-Khazneh), aparece en la película Indiana Jones y la última cruzada, aunque en realidad es una tumba real.</p>
+                        <div class="mt-4">
+                            <h5 class="fw-bold">Video:</h5>
+                            <video controls class="w-100 rounded shadow mb-3">
+                                <source src="{{ url_for('static', filename='videos/chichen.mp4') }}" type="video/mp4">
+                                Tu navegador no soporta el video.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="{{ url_for('static', filename='img/petra.jpg') }}" alt="Petra" class="img-fluid rounded shadow w-75 mb-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card border-0 shadow-sm mb-5">
+        <div class="card-body p-0">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h2 class="fw-bold text-warning border-bottom pb-2 mb-4">Taj Mahal</h2>
+                        <p class="fw-bold text-muted">India</p>
+                        <p>Mausoleo de mármol blanco construido entre 1631 y 1654 por el emperador mogol Shah Jahan en memoria de su esposa favorita, Mumtaz Mahal.</p>
+                        <p>Considerado la joya del arte musulmán en India, combina elementos arquitectónicos islámicos, persas, otomanos e indios.</p>
+                        <p>La leyenda cuenta que Shah Jahan planeaba construir un mausoleo idéntico en mármol negro al otro lado del río, conectado por un puente de oro, pero fue depuesto por su hijo antes de poder realizarlo.</p>
+                        <div class="mt-4">
+                            <h5 class="fw-bold">Video:</h5>
+                            <video controls class="w-100 rounded shadow mb-3">
+                                <source src="{{ url_for('static', filename='videos/chichen.mp4') }}" type="video/mp4">
+                                Tu navegador no soporta el video.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="{{ url_for('static', filename='img/taj-mahal.jpg') }}" alt="Taj Mahal" class="img-fluid rounded shadow w-75 mb-3">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
