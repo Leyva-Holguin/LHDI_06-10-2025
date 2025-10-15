@@ -21,6 +21,10 @@ def maravillas():
 @app.route("/acerca")
 def acerca():
     return render_template('acerca.html')
+    
+@app.route("/formulario")
+def acerca():
+    return render_template('formulario.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
