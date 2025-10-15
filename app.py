@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -21,10 +21,15 @@ def maravillas():
 @app.route("/acerca")
 def acerca():
     return render_template('acerca.html')
-    
+
 @app.route("/formulario")
-def acerca():
+def forn():
     return render_template('formulario.html')
+
+@app.route("/registro")
+def reg():
+    return render_template('registro.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)

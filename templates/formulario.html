@@ -9,10 +9,10 @@
                 <h2 class="text-center">Crea una cuenta</h2>
                 <p class="text-center text-muted">Es rápido y fácil.</p>
                 <section>
-                    <form>
+                    <form method="post" action="(( url_for('register_user') ))">
                         <div class="row mb-3">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Nombre">
+                                <input type="text" class="form-control" name="nombre" placeholder="Nombre" value="(( request.form.get('nombre', '')))">
                             </div>
                             <div class="col">
                                 <input type="text" class="form-control" placeholder="Apellido">
@@ -77,7 +77,7 @@
                         <div class="mb-3">
                             <button type="submit" class="btn btn-primary">Registrarte</button>
                         </div>
-                        <a href="#">¿Ya tienes una cuenta?</a>
+                        <a href="http://127.0.0.1:5000/registro">¿Ya tienes una cuenta?</a>
                     </form>
                 </section>
             </div>
