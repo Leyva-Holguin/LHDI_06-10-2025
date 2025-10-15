@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+<div class="container text-center">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h1 class="mb-4 text-primary">Facebook</h1>
+            <div class="card p-4">
+                <h2 class="text-center">Crea una cuenta</h2>
+                <p class="text-center text-muted">Es rápido y fácil.</p>
+                <section>
+                    <form>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Nombre">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Apellido">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label>Fecha de nacimiento</label>
+                            <div class="row">
+                                <div class="col-3">
+                                    <input type="number" class="form-control" min="1" max="31" placeholder="dia">
+                                </div>
+                                <div class="col-4">
+                                    <input type="number" class="form-control" min="1" max="12" placeholder="mes">
+                                </div>
+                                <div class="col-4">
+                                    <input type="number" class="form-control" min="1800" max="2025" placeholder="Año">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Género</label>
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="genero" id="mujer">
+                                        <label class="form-check-label" for="mujer">Mujer</label>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="genero" id="hombre">
+                                        <label class="form-check-label" for="hombre">Hombre</label>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="genero" id="otro">
+                                        <label class="form-check-label" for="otro">Otro</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Correo electrónico">
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" placeholder="Contraseña nueva">
+                        </div>
+                        <div class="mb-3">
+                            <p class="small text-muted">Es posible que las personas que usan nuestro servicio
+                                hayan
+                                subido tu información de contacto a Facebook. <a href="#">Más información</a>.
+                            </p>
+                        </div>
+                        <div class="mb-3">
+                            <p class="small text-muted">Al hacer clic en "Registrarte", aceptas nuestras <a
+                                    href="#">Condiciones</a>, la <a href="#">Política de privacidad</a> y la <a
+                                    href="#">Política de cookies</a>. Es posible que te enviemos notificaciones
+                                por
+                                SMS, que puedes desactivar cuando quieras.</p>
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary">Registrarte</button>
+                        </div>
+                        <a href="#">¿Ya tienes una cuenta?</a>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock%}
