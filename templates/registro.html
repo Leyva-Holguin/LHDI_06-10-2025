@@ -6,20 +6,84 @@
         <div class="col-md-6">
             <h1 class="mb-4 text-primary">Facebook</h1>
             <div class="card p-4">
-                <h2 class="text-center">Iniciar sesion</h2>
+                <h2 class="text-center">Crea una cuenta</h2>
+                <p class="text-center text-muted">Es rápido y fácil.</p>
                 <section>
-                    <form>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Correo electrónico">
+                    <form method="post" id="registro" action="/registrar">
+                        <div class="row mb-3">
+                            <div class="col">
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre"
+                                    value="{{ request.form.get('nombre', '')}}">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="dia">Fecha de nacimiento</label>
+                            <div class="row">
+                                <div class="col-3">
+                                    <input type="number" class="form-control" id="dia" name="dia" min="1" max="31"
+                                        placeholder="dia">
+                                </div>
+                                <div class="col-4">
+                                    <input type="number" class="form-control" id="mes" name="mes" min="1" max="12"
+                                        placeholder="mes">
+                                </div>
+                                <div class="col-4">
+                                    <input type="number" class="form-control" id="year" name="year" min="1800"
+                                        max="2025" placeholder="Año">
+                                </div>
+                            </div>
                         </div>
                         <div class="mb-3">
-                            <input type="password" class="form-control" placeholder="Contraseña nueva">
-                            <a href="#">¿Olvidaste tu contraseña?</a>
+                            <label class="form-label">Género</label>
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="genero" id="mujer">
+                                        <label class="form-check-label" for="mujer">Mujer</label>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="genero" id="hombre">
+                                        <label class="form-check-label" for="hombre">Hombre</label>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="genero" id="otro">
+                                        <label class="form-check-label" for="otro">Otro</label>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="mb-3">
-                            <button type="submit" class="btn btn-primary">Iniciar sesion</button>
+                            <input type="text" class="form-control" id="correo" name="correo"
+                                placeholder="Correo electrónico">
                         </div>
-                        <a href="http://127.0.0.1:5000/formulario">¿No tienes una cuenta?</a>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" id="password" name="password"
+                                placeholder="Contraseña nueva">
+                        </div>
+                        <div class="mb-3">
+                            <p class="small text-muted">Es posible que las personas que usan nuestro servicio
+                                hayan
+                                subido tu información de contacto a Facebook. <a href="#">Más información</a>.
+                            </p>
+                        </div>
+                        <div class="mb-3">
+                            <p class="small text-muted">Al hacer clic en "Registrarte", aceptas nuestras <a
+                                    href="#">Condiciones</a>, la <a href="#">Política de privacidad</a> y la <a
+                                    href="#">Política de cookies</a>. Es posible que te enviemos notificaciones
+                                por
+                                SMS, que puedes desactivar cuando quieras.</p>
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary">Registrarte</button>
+                        </div>
+                        <a href="http://127.0.0.1:5000/registro">¿Ya tienes una cuenta?</a>
                     </form>
                 </section>
             </div>
