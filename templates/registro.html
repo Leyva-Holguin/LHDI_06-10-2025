@@ -12,11 +12,13 @@
                     <form method="post" id="registro" action="/registrar">
                         <div class="row mb-3">
                             <div class="col">
-                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required minlength="2" maxlength="20"
-                                    value="{{ request.form.get('nombre', '')}}">
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre"
+                                    required minlength="2" maxlength="20" value="{{ request.form.get('nombre', '')}}">
                             </div>
                             <div class="col">
-                                <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido" required minlength="2" maxlength="20" value="{{ request.form.get('apellido', '')}}">
+                                <input type="text" class="form-control" id="apellido" name="apellido"
+                                    placeholder="Apellido" required minlength="2" maxlength="20"
+                                    value="{{ request.form.get('apellido', '')}}">
                             </div>
                         </div>
                         <div class="mb-4">
@@ -41,19 +43,19 @@
                             <div class="row">
                                 <div class="col-4">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="genero" id="mujer">
+                                        <input class="form-check-input" type="radio" name="genero" id="mujer" value="mujer">
                                         <label class="form-check-label" for="mujer">Mujer</label>
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="genero" id="hombre">
+                                        <input class="form-check-input" type="radio" name="genero" id="hombre" value="hombre">
                                         <label class="form-check-label" for="hombre">Hombre</label>
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="genero" id="otro">
+                                        <input class="form-check-input" type="radio" name="genero" id="otro" value="otro">
                                         <label class="form-check-label" for="otro">Otro</label>
                                     </div>
                                 </div>
@@ -63,9 +65,15 @@
                             <input type="text" class="form-control" id="correo" name="correo"
                                 placeholder="Correo electrónico" value="{{ request.form.get('correo', '')}}">
                         </div>
+                        <div class="mb-3"> <!--Bcon name se hara la verificacion-->
+                            <input type="password" class="form-control" id="password" name="password" required
+                                placeholder="Contraseña nueva" pattern="[A-Za-z]{8,}"
+                                title="ponle mas po weon no sea fome" value="{{ request.form.get('password', '')}}">
+                        </div>
                         <div class="mb-3">
-                            <input type="password" class="form-control" id="password" name="password"
-                                placeholder="Contraseña nueva" pattern="[A-Za-z]{8,}" title="ponle mas po weon no sea fome" value="{{ request.form.get('password', '')}}">
+                            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
+                                required placeholder="Confirmar contraseña"
+                                value="{{ request.form.get('confirmPassword', '')}}">
                         </div>
                         <div class="mb-3">
                             <p class="small text-muted">Es posible que las personas que usan nuestro servicio

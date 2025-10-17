@@ -9,7 +9,7 @@ def inicio():
     return render_template('inicio.html')
 
 @app.route("/animales")
-def aniamles():
+def animales():
     return render_template('animales.html')
 
 @app.route("/vehiculos")
@@ -30,7 +30,7 @@ def registro():
 
 @app.route("/iniciar")
 def iniciar():
-    return render_template('inicar.html')
+    return render_template('iniciar.html')
 
 @app.route("/registrar", methods = ("GET", "POST"))
 def registrar():
@@ -43,11 +43,12 @@ def registrar():
         year = request.form.get("year")
         correo = request.form.get("correo")
         password = request.form.get("password")
+        confirmPassword = request.form.get("confirmPassword")
         genero = request.form.get("genero")
         
-        #if password != confirmPassword:
-        #    error = "la contraseña es incorrecta"
-        if error != None:
+        if password != confirmPassword:
+            error = "la contraseña es incorrecta"
+        if error is not None:
             flash(error)
             return render_template('registro.html')
         else:
