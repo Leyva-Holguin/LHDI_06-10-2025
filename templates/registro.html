@@ -9,15 +9,16 @@
                 <h2 class="text-center">Crea una cuenta</h2>
                 <p class="text-center text-muted">Es rápido y fácil.</p>
 
-                {% with messages = get_flashed_messages() %}
-                    {% if messages %}
-                        {% for message in messages %}
-                        <div class="alert alert-{{ 'danger' if category == 'error' else 'danger' }} alert-dismissible fade show" role="alert">
-                                {{ message }}
-                                <button type="button" class="btn-close" dara-bs-dismiss="alert" aria-label="close></button>
-                            {% endfor %}
-                        </div>
-                    {% endif %}
+                {% with messages = get_flashed_messages(with_categories=True) %}
+                {% if messages %}
+                {% for category, message in messages %}
+                <div class="alert alert-{{ 'danger' if category == 'error' else 'danger' }} alert-dismissible fade show"
+                    role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+                {% endif %}
                 {% endwith %}
 
                 <section>
@@ -38,7 +39,7 @@
                             <div class="row">
                                 <div class="col-3">
                                     <input type="number" class="form-control" id="dia" name="dia" min="1" max="31"
-                                        placeholder="dia" value="{{ request.form.get('dia', '')}}">
+                                        placeholder="día" value="{{ request.form.get('dia', '')}}">
                                 </div>
                                 <div class="col-4">
                                     <input type="number" class="form-control" id="mes" name="mes" min="1" max="12"
@@ -55,32 +56,36 @@
                             <div class="row">
                                 <div class="col-4">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="genero" id="mujer" value="mujer">
+                                        <input class="form-check-input" type="radio" name="genero" id="mujer"
+                                            value="mujer" {{ 'checked' if request.form.get('genero')=='mujer' }}>
                                         <label class="form-check-label" for="mujer">Mujer</label>
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="genero" id="hombre" value="hombre">
+                                        <input class="form-check-input" type="radio" name="genero" id="hombre"
+                                            value="hombre" {{ 'checked' if request.form.get('genero')=='hombre' }}>
                                         <label class="form-check-label" for="hombre">Hombre</label>
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="genero" id="otro" value="otro">
+                                        <input class="form-check-input" type="radio" name="genero" id="otro"
+                                            value="otro" {{ 'checked' if request.form.get('genero')=='otro' }}>
                                         <label class="form-check-label" for="otro">Otro</label>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="correo" name="correo"
+                            <input type="email" class="form-control" id="correo" name="correo"
                                 placeholder="Correo electrónico" value="{{ request.form.get('correo', '')}}">
                         </div>
-                        <div class="mb-3"> <!--Bcon name se hara la verificacion-->
+                        <div class="mb-3">
                             <input type="password" class="form-control" id="password" name="password" required
-                                placeholder="Contraseña nueva" pattern="[A-Za-z]{8,}"
-                                title="ponle mas po weon no sea fome" value="{{ request.form.get('password', '')}}">
+                                placeholder="Contraseña nueva" pattern="^([0-9]{10,15}|[a-z0-9._%+\])"
+                                title="Debe de conteneral menos un numero, una mayuscula y un caracter especial"
+                                value="{{ request.form.get('password', '')}}">
                         </div>
                         <div class="mb-3">
                             <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
@@ -88,8 +93,7 @@
                                 value="{{ request.form.get('confirmPassword', '')}}">
                         </div>
                         <div class="mb-3">
-                            <p class="small text-muted">Es posible que las personas que usan nuestro servicio
-                                hayan
+                            <p class="small text-muted">Es posible que las personas que usan nuestro servicio hayan
                                 subido tu información de contacto a Facebook. <a href="#">Más información</a>.
                             </p>
                         </div>
@@ -97,8 +101,7 @@
                             <p class="small text-muted">Al hacer clic en "Registrarte", aceptas nuestras <a
                                     href="#">Condiciones</a>, la <a href="#">Política de privacidad</a> y la <a
                                     href="#">Política de cookies</a>. Es posible que te enviemos notificaciones
-                                por
-                                SMS, que puedes desactivar cuando quieras.</p>
+                                por SMS, que puedes desactivar cuando quieras.</p>
                         </div>
                         <div class="mb-3">
                             <button type="submit" class="btn btn-primary">Registrarte</button>
@@ -110,4 +113,4 @@
         </div>
     </div>
 </div>
-{% endblock%}
+{% endblock %}

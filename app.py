@@ -53,10 +53,7 @@ def registrar():
             return render_template('registro.html')
         else:
             flash(f"Registro exitoso: {nombre}")
-            return render_template('iniciar.html')
-
-
-
+            return render_template('inicio.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
