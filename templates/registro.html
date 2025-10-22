@@ -79,11 +79,11 @@
                         </div>
                         <div class="mb-3">
                             <input type="email" class="form-control" id="correo" name="correo"
-                                placeholder="Correo electrónico" value="{{ request.form.get('correo', '')}}">
+                                placeholder="Correo electrónico" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" value="{{ request.form.get('correo', '')}}">
                         </div>
                         <div class="mb-3">
                             <input type="password" class="form-control" id="password" name="password" required
-                                placeholder="Contraseña nueva" pattern="^([0-9]{10,15}|[a-z0-9._%+\])"
+                                placeholder="Contraseña nueva" pattern="(?= *\d)(?= *[a-z])(?= *[A-Z] {8,}"
                                 title="Debe de conteneral menos un numero, una mayuscula y un caracter especial"
                                 value="{{ request.form.get('password', '')}}">
                         </div>
