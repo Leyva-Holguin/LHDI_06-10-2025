@@ -5,6 +5,7 @@ Crear una pagina que tenga lo siguiente
 - animales exoticos
 - vehiculos
 - las 7 maravillas del mundo
+- formulario de registro
 - acerca de (informacion mia)
 ## Datos:  
 - Nombre: Daniel Ivan  
