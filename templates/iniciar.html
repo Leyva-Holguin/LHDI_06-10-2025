@@ -1,29 +1,50 @@
 {% extends "base.html" %}
 
 {% block contenido %}
-<div class="container text-center">
+<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <h1 class="mb-4 text-primary">Facebook</h1>
             <div class="card p-4">
-                <h2 class="text-center">Iniciar sesion</h2>
-                <section>
-                    <form>
+                <h2 class="text-center mb-4">Iniciar Sesión</h2>
+
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="alert alert-{{ 'danger' if category == 'error' else 'success' }} alert-dismissible fade show" role="alert">
+                                {{ message }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+                {% if session.get('logueado') %}
+                    <div class="text-center">
+                        <h4>¡Hola {{ session.get('usuario') }}!</h4>
+                        <p>Ya has iniciado sesión.</p>
+                        <a href="{{ url_for('logout') }}" class="btn btn-warning">Cerrar Sesión</a>
+                    </div>
+                {% else %}
+                    <form method="post" action="{{ url_for('validar') }}">
                         <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Correo electrónico">
+                            <input type="email" class="form-control" name="correo" 
+                                   placeholder="Correo electrónico" required
+                                   value="{{ request.form.get('correo', '') }}">
                         </div>
                         <div class="mb-3">
-                            <input type="password" class="form-control" placeholder="Contraseña nueva">
-                            <a href="#">¿Olvidaste tu contraseña?</a>
+                            <input type="password" class="form-control" name="password" 
+                                   placeholder="Contraseña" required>
                         </div>
-                        <div class="mb-3">
-                            <button type="submit" class="btn btn-primary">Iniciar sesion</button>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
                         </div>
-                        <a href="http://127.0.0.1:5000/formulario">¿No tienes una cuenta?</a>
                     </form>
-                </section>
+                    <div class="text-center mt-3">
+                        <p>¿No tienes cuenta? <a href="{{ url_for('registro') }}">Regístrate aquí</a></p>
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>
 </div>
-{% endblock%}
+{% endblock %}
