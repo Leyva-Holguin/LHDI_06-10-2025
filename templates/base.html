@@ -43,7 +43,7 @@
                                         </li>
                                         {% if session.get('logueado') %}
                                             <li class="nav-item">
-                                                <span class="nav-link text-success">Hola {{ session.get('usuario') }}</span>
+                                                <span class="nav-link text-success"></span>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link active" href="{{ url_for('logout') }}">Cerrar Sesión</a>
@@ -67,8 +67,7 @@
                     </nav>
                 </div>
             </div>
-            
-            <!-- Mensaje de bienvenida -->
+
             {% if session.get('logueado') %}
             <div class="text-center mt-5 pt-4">
                 <p class="text-success">Bienvenido {{ session.get('usuario') }}</p>

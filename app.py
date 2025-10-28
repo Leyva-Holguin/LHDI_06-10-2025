@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, session
 
 app = Flask(__name__)
-#simulando base de datos
 USUARIOS_REGISTRADOS = {
     'admin@correo.com':{
         'password': 'admin123',
@@ -37,7 +36,6 @@ def registro():
 
 @app.route("/iniciar")
 def iniciar():
-    # Si ya está logueado, mostrar página normal
     if session.get('logueado'):
         return render_template('iniciar.html')
     return render_template('iniciar.html')
@@ -69,7 +67,6 @@ def validar():
     
     return redirect(url_for('iniciar'))
 
-# AÑADIR RUTA PARA CERRAR SESIÓN
 @app.route("/logout")
 def logout():
     session.clear()
@@ -92,8 +89,6 @@ def registrar():
         
         if password != confirmPassword:
             error = "Las contraseñas no coinciden"
-        
-        # Verificar si el correo ya existe
         elif correo in USUARIOS_REGISTRADOS:
             error = "Este correo ya está registrado"
         
@@ -101,7 +96,7 @@ def registrar():
             flash(error, 'error')
             return render_template('registro.html')
         else:
-            # Registrar nuevo usuario
+
             USUARIOS_REGISTRADOS[correo] = {
                 'password': password,
                 'nombre': f"{nombre} {apellido}",
