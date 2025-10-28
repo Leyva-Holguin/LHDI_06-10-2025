@@ -37,7 +37,7 @@ def registro():
 @app.route("/iniciar")
 def iniciar():
     if session.get('logueado'):
-        return render_template('iniciar.html')
+        return render_template('inicio.html')
     return render_template('iniciar.html')
 
 @app.route('/validaLogin', methods=['GET','POST'])
